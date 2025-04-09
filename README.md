@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 01 - Ruby</title>
+    <title>Projeto de Calculadora em Ruby</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,77 +84,114 @@
 </head>
 <body>
 
-    <h1>Projeto 01 - Ruby</h1>
+    <h1>Projeto de Calculadora em Ruby</h1>
 
-    <h2>Descrição do Projeto</h2>
-    <p>Esse é o meu primeiro projeto de Ruby, onde criamos um programa simples que solicita o nome, sobrenome e idade do usuário, e depois exibe essas informações na tela. O objetivo é entender os conceitos básicos de entrada e saída de dados no Ruby.</p>
+    <h2>Objetivo do Projeto</h2>
+    <p>Este é um projeto simples feito em Ruby para criar uma calculadora interativa. O programa solicita ao usuário que escolha entre cinco opções: soma, subtração, multiplicação, divisão ou sair. Dependendo da escolha, o programa executa a operação e exibe o resultado.</p>
 
+    <h2>Descrição do Código</h2>
+    <p>O código foi estruturado em um loop que exibe um menu com cinco opções. O programa pede para o usuário escolher uma das opções, e de acordo com a escolha, ele solicita dois números e realiza a operação correspondente.</p>
+
+    <h3>Menu de Opções</h3>
+    <p>O menu exibido para o usuário é o seguinte:</p>
+    <div class="step">
+        <pre><code>Escolha uma das opções:
+1 - Soma
+2 - Subtração
+3 - Multiplicação
+4 - Divisão
+5 - Sair</code></pre>
+    </div>
+
+    <h3>Estrutura do Código</h3>
+    <p>O código funciona da seguinte maneira:</p>
+    <ul>
+        <li>O programa exibe o menu e aguarda a entrada do usuário.</li>
+        <li>Dependendo da opção escolhida, o programa pede dois números e realiza a operação desejada.</li>
+        <li>Se o usuário escolher a opção 5 (Sair), o programa termina.</li>
+        <li>Se o usuário escolher uma opção inválida, o programa solicita que ele tente novamente.</li>
+    </ul>
+
+    <h3>Exemplo de Execução</h3>
     <blockquote>
-        Exemplo de execução:
-        <pre><code>$ ruby projeto_01.rb</code></pre>
+        Exemplo de execução do programa:
+        <pre><code>$ ruby calculadora.rb
+Escolha uma das opções:
+1 - Soma
+2 - Subtração
+3 - Multiplicação
+4 - Divisão
+5 - Sair
+1
+Digite o primeiro número:
+3
+Digite o segundo número:
+2
+Resultado da soma: 5.0</code></pre>
     </blockquote>
 
-    <h2>Como Funciona o Programa</h2>
-
-    <h3>Passo 1: Solicitação do Nome</h3>
-    <p>O programa solicita ao usuário para digitar o seu primeiro nome:</p>
-    <div class="step">
-        <p><strong>Comando:</strong></p>
-        <pre><code>print "Digite o seu primeiro nome: "</code></pre>
-    </div>
-    <p>O valor digitado é armazenado na variável <code>nome</code>:</p>
-    <div class="step">
-        <pre><code>nome = gets.chomp</code></pre>
-    </div>
-
-    <h3>Passo 2: Solicitação do Sobrenome</h3>
-    <p>Em seguida, o programa solicita o sobrenome do usuário:</p>
-    <div class="step">
-        <p><strong>Comando:</strong></p>
-        <pre><code>print "Digite o seu sobrenome: "</code></pre>
-    </div>
-    <p>O sobrenome é armazenado na variável <code>sobrenome</code>:</p>
-    <div class="step">
-        <pre><code>sobrenome = gets.chomp</code></pre>
-    </div>
-
-    <h3>Passo 3: Solicitação da Idade</h3>
-    <p>Após o nome e sobrenome, o programa pede a idade do usuário:</p>
-    <div class="step">
-        <p><strong>Comando:</strong></p>
-        <pre><code>print "Qual a sua idade: "</code></pre>
-    </div>
-    <p>A idade é lida e convertida para número inteiro e armazenada na variável <code>num1</code>:</p>
-    <div class="step">
-        <pre><code>num1 = gets.chomp.to_i</code></pre>
-    </div>
-
-    <h2>Resultado na Tela</h2>
-    <p>Depois de coletar todos os dados, o programa exibe uma mensagem com as informações fornecidas pelo usuário:</p>
-    <div class="step">
-        <pre><code>puts "O resultado da solicitação dos dados será: Seu nome completo é: #{nome} #{sobrenome}, e sua idade é: #{num1}"</code></pre>
-    </div>
-
     <h2>Código Completo</h2>
-    <pre><code>
-# Código completo do programa Ruby
-
-print "Digite o seu primeiro nome: "
-nome = gets.chomp
-
-print "Digite o seu sobrenome: "
-sobrenome = gets.chomp
-
-puts "Nome completo #{nome} #{sobrenome} ! "
-
-print "Qual a sua idade: "
-num1 = gets.chomp.to_i
-
-puts "O resultado da solicitação dos dados será: Seu nome completo é: #{nome} #{sobrenome}, e sua idade é: #{num1}"
-    </code></pre>
+    <pre><code># Calculadora em Ruby
+loop do
+    # Exibe o menu de opções
+    puts "Escolha uma das opções:"
+    puts "1 - Soma"
+    puts "2 - Subtração"
+    puts "3 - Multiplicação"
+    puts "4 - Divisão"
+    puts "5 - Sair"
+  
+    # Lê a opção escolhida
+    escolha = gets.to_i
+  
+    # Verifica qual operação o usuário escolheu
+    if escolha == 1
+      puts "Digite o primeiro número:"
+      num1 = gets.to_f
+      puts "Digite o segundo número:"
+      num2 = gets.to_f
+      soma = num1 + num2
+      puts "Resultado da soma: #{soma}"
+  
+    elsif escolha == 2
+      puts "Digite o primeiro número:"
+      num1 = gets.to_f
+      puts "Digite o segundo número:"
+      num2 = gets.to_f
+      subtracao = num1 - num2
+      puts "Resultado da subtração: #{subtracao}"
+  
+    elsif escolha == 3
+      puts "Digite o primeiro número:"
+      num1 = gets.to_f
+      puts "Digite o segundo número:"
+      num2 = gets.to_f
+      multiplicacao = num1 * num2
+      puts "Resultado da multiplicação: #{multiplicacao}"
+  
+    elsif escolha == 4
+      puts "Digite o primeiro número:"
+      num1 = gets.to_f
+      puts "Digite o segundo número:"
+      num2 = gets.to_f
+      if num2 == 0
+        puts "Erro: Não é possível dividir por zero!"
+      else
+        divisao = num1 / num2
+        puts "Resultado da divisão: #{divisao}"
+      end
+  
+    elsif escolha == 5
+      puts "Saindo..."
+      break  # Sai do loop se a opção 5 for escolhida
+  
+    else
+      puts "Opção inválida! Tente novamente."
+    end
+end</code></pre>
 
     <footer>
-        <p>Projeto desenvolvido como parte de um exercício para aprender Ruby. © 2025</p>
+        <p>Projeto desenvolvido como parte do desafio de Ruby. © 2025</p>
     </footer>
 
 </body>
