@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto de Calculadora em Ruby</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f7f7f7;
@@ -12,28 +18,34 @@
             margin: 0;
             padding: 0;
         }
+
         h1, h2, h3 {
             color: #2c3e50;
         }
+
         h1 {
             text-align: center;
             margin-top: 20px;
             font-size: 2.5em;
         }
+
         h2 {
             font-size: 1.8em;
             margin-top: 30px;
         }
+
         h3 {
             font-size: 1.4em;
             margin-top: 20px;
         }
+
         p {
             font-size: 1.1em;
             line-height: 1.6;
             margin: 15px 0;
             padding: 0 20px;
         }
+
         pre {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -42,16 +54,18 @@
             overflow-x: auto;
             font-size: 1em;
             margin: 20px 0;
-            max-width: 100%;
             white-space: pre-wrap;
             word-wrap: break-word;
+            max-width: 100%;
         }
+
         code {
             background-color: #34495e;
             padding: 2px 6px;
             border-radius: 3px;
             color: #ecf0f1;
         }
+
         blockquote {
             background-color: #ecf0f1;
             padding: 15px;
@@ -59,19 +73,23 @@
             margin: 20px 0;
             font-style: italic;
         }
+
         ul {
             padding-left: 40px;
         }
+
         li {
             font-size: 1.1em;
             line-height: 1.5;
         }
+
         .step {
             margin-left: 20px;
             padding: 5px 0;
             background-color: #e7f1f7;
             border-left: 4px solid #3498db;
         }
+
         footer {
             text-align: center;
             font-size: 0.9em;
